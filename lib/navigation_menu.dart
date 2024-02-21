@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'Pages/bloc/landing_page_bloc.dart';
 import 'Widgets/custom_appbar.dart';
 
@@ -19,12 +18,6 @@ List<BottomNavigationBarItem> bottomNavItems = const <BottomNavigationBarItem>[
     label: 'Account',
   ),
 ];
-
-// const List<Widget> bottomNavScreen = <Widget>[
-//   Text('Home'),
-//   Text('Feature'),
-//   Text('Account'),
-// ];
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key});

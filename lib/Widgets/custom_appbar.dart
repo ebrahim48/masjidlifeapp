@@ -97,6 +97,50 @@ class CustomBody extends StatelessWidget {
               ),
             ),
           ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 10, bottom: 10 ,left: 15),
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                height: 100,
+                width: 338,
+                decoration: BoxDecoration(
+                  color: Color(0xFFCCE9DC),
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                    color: Color(0xFFCCE9DC).withOpacity(0.3),
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                    )
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 50, left: 70),
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        Image.asset(
+                          "assets/images/screen.png",
+                          height: 185,
+                          width: 80,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
           Container(
             width: 340,
             height: 100,
