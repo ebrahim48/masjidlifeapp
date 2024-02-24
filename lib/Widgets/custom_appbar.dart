@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'ProductsWidget.dart';
+
 class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -97,10 +99,11 @@ class CustomBody extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(width: 1,),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 10, bottom: 10 ,left: 15),
+                margin: EdgeInsets.only(top: 10, bottom: 10, left: 15),
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 height: 100,
                 width: 338,
@@ -109,7 +112,7 @@ class CustomBody extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                    color: Color(0xFFCCE9DC).withOpacity(0.3),
+                      color: Color(0xFFCCE9DC).withOpacity(0.3),
                       blurRadius: 5,
                       spreadRadius: 1,
                     )
@@ -121,7 +124,7 @@ class CustomBody extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 50, left: 70),
+                          margin: EdgeInsets.only(top: 10, bottom: 10, left: 15),
                           height: 150,
                           width: 150,
                           decoration: BoxDecoration(
@@ -131,11 +134,48 @@ class CustomBody extends StatelessWidget {
                         ),
                         Image.asset(
                           "assets/images/screen.png",
-                          height: 185,
-                          width: 80,
+                          height: 120,
+                          width: 50,
+                          fit: BoxFit.contain,
                         ),
                       ],
-                    )
+                    ),
+                    // Padding(
+                    //   padding: EdgeInsets.symmetric(vertical: 30),
+                    //   child: Column(
+                    //     crossAxisAlignment: CrossAxisAlignment.start,
+                    //     children: [
+                    //       Text("About",
+                    //         style: TextStyle(
+                    //           color: Colors.white,
+                    //           fontSize: 14,
+                    //           fontWeight: FontWeight.w500,
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+
+                    SizedBox(width: 1),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 10, bottom: 10, left: 15),
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        Image.asset(
+                          "assets/images/screen3.png",
+                          height: 120,
+                          width: 50,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -169,6 +209,18 @@ class CustomBody extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+            child: Text("Our Products/ Services",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          ProductWidget(),
         ],
       ),
     );
